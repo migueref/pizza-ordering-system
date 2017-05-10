@@ -52,11 +52,30 @@
       <video class="video" src="./video/video.mp4" autoplay loop="">
       </video>
     </div>
+    <!-- FORMULARIO PARA INGRESAR PRODUCTOS -->
+    <div class="video-container vertical-center">
+      <div class="front absolute card col-xs-12">
+        <h2 class ="white-text">Registrar nuevo producto</h2>
+        <input type="text" class="form-control" id="nombre" value="" placeholder="Escribe el nombre del producto "><br>
+        <input type="number" class="form-control" id="precio" value="" placeholder="Escribe el precio del producto "><br>
+        <input type="text" class="form-control" id="categoria" value="" placeholder="Escribe el categoría del producto "><br>
+        <button type="button" class="form-control" id="guardar">Guardar producto</button>
+      </div>
+    </div>
+
     <!-- container -->
     <script src="./js/script.js" charset="utf-8"></script>
     <script type="text/javascript">
-      producto = new Producto("Pizza hawaina",150,"Pizzas");
-      console.log("Producto creado: "+producto.nombre);
+      let guardar = document.querySelector("#guardar");
+      guardar.addEventListener('click',function(){
+        let nombre = document.querySelector("#nombre");
+        let precio = document.querySelector("#precio");
+        let categoria = document.querySelector("#categoria");
+
+        let producto = new Producto(nombre.value,precio.value,categoria.value);
+        console.log("Producto creado: "+producto.nombre);
+      });
+
     </script>
   </body>
 </html>

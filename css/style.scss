@@ -35,7 +35,24 @@ html{
   .absolute{
     position: absolute;
   }
+  .front {
+    z-index: 100!important;
+  }
+  .white {
+    background-color: white;
+  }
+  .card {
+    width:400px!important;
+    height: 400px!important;
+    background-color: rgba(120,0,0,0.5);
 
-
-
+  }
+  .vertical-center {
+    -ms-display: flex;
+    display: flex;
+    /* alineacion vertical */
+    align-items: center;
+     /* alineacion horizontal */
+    justify-content: center;
+  }
 }
